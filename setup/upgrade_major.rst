@@ -152,29 +152,17 @@ starting with ``symfony/`` to the new major version:
         "...": "...",
     }
 
-Your ``composer.json`` file should also have an ``extra`` block that you will
-*also* need to update:
+At the bottom of your ``composer.json`` file, in the ``extra`` block you can
+find a data setting for the Symfony version. Make sure to also upgrade
+this one. For instance, update it to ``5.0.*`` to upgrade to Symfony 5.0:
 
 .. code-block:: diff
 
     "extra": {
         "symfony": {
-            "...": "...",
-    -         "require": "4.4.*"
-    +         "require": "5.0.*"
-        }
-    }
-
-At the bottom of your ``composer.json`` file, in the ``extra`` block you can
-find a data setting for the Symfony version. Make sure to also upgrade
-this one. For instance, update it to ``5.0.*`` to upgrade to Symfony 5.0:
-
-.. code-block:: json
-
-    "extra": {
-        "symfony": {
             "allow-contrib": false,
-            "require": "5.0.*"
+    -       "require": "4.4.*"
+    +       "require": "5.0.*"
         }
     }
 
